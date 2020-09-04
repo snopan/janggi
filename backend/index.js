@@ -11,10 +11,7 @@ const server = https.createServer({
   key: fs.readFileSync('./key.pem')
 });
 
-const wss = new WebSocket.Server({
-    port: 9080,
-    server: server
-});
+const wss = new WebSocket.Server({server});
 
 console.log("Started server");
 
@@ -274,3 +271,5 @@ const sendRoomList = (ws) => {
         rooms: session.rooms
     })
 }
+
+server.listen(9080)
