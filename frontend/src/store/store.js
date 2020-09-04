@@ -10,7 +10,7 @@ import config from "../../config.json";
 Vue.use(Vuex);
 
 // Start ws connection to the server
-const socket = new WebSocket("ws://" +
+const socket = new WebSocket("wss://" +
 	config.ws.address + ":" +
 	config.ws.port
 );
