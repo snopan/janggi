@@ -7,8 +7,8 @@ import fs from "fs";
 import https from "https";
 
 const server = https.createServer({
-  cert: fs.readFileSync('./ssl_pem/cert.pem'),
-  key: fs.readFileSync('./ssl_pem/key.pem')
+  cert: fs.readFileSync('./cert.pem'),
+  key: fs.readFileSync('./key.pem')
 });
 
 const wss = new WebSocket.Server({
