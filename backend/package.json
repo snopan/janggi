@@ -6,12 +6,13 @@
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "websocket": "nodemon --experimental-json-modules --experimental-modules index.js"
+    "websocket": "forever start nodemon --exitcrash index.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "crypto": "^1.0.1",
+    "forver": "0.0.6",
     "nodemon": "^2.0.4",
     "ws": "^7.3.1"
   }
