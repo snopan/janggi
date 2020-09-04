@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "websocket": "forever -c 'nodemon --exitcrash' --experimental-json-modules --experimental-modules index.js"
+    "websocket": "forever -c 'nodemon --experimental-json-modules --experimental-modules --exitcrash' index.js"
   },
   "author": "",
   "license": "ISC",
