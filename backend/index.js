@@ -13,8 +13,6 @@ const server = https.createServer({
 
 const wss = new WebSocket.Server({server});
 
-console.log("Started server");
-
 wss.on("connection", (ws, req) => {
     console.log("connection established")
     ws.ip = req.connection.remoteAddress;
@@ -59,6 +57,9 @@ wss.on("connection", (ws, req) => {
         }
     })
 })
+
+server.listen(9080);
+console.log("Started server");
 
 const parseMessage = (ws, msg) => {
 
@@ -271,5 +272,3 @@ const sendRoomList = (ws) => {
         rooms: session.rooms
     })
 }
-
-server.listen(9080)
