@@ -16,6 +16,8 @@ const wss = new WebSocket.Server({
     server: server
 });
 
+console.log("Started server");
+
 wss.on("connection", (ws, req) => {
     console.log("connection established")
     ws.ip = req.connection.remoteAddress;
