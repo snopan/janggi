@@ -3,9 +3,17 @@ import Crypto from "crypto";
 import Session from "./Session.js";
 import Room from "./Room.js";
 import config from "./config.json";
+import fs from "fs";
+import https from "https";
+
+const server = https.createServer({
+  cert: fs.readFileSync('./ssl_pem/cert.pem'),
+  key: fs.readFileSync('./ssl_pem/key.pem')
+});
 
 const wss = new WebSocket.Server({
-    port: 9080
+    port: 9080,
+    server: server
 });
 
 wss.on("connection", (ws, req) => {
