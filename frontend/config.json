@@ -1,0 +1,15 @@
+{
+  "domain": "https://snopan.github.io/janggi",
+  "session_expire": 1,
+  "ws": {
+    "address": "188.166.242.57",
+    "port": 9080
+  },
+  "faces": [
+    "(ಥ﹏ಥ)",
+    "(ง'̀-'́)ง",
+    "(づ￣ ³￣)づ",
+    "(☞ﾟ∀ﾟ)☞",
+    "(~˘▾˘)~"
+  ]
+}

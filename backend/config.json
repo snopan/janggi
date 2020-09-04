@@ -1,0 +1,4 @@
+{
+  "session_validate_wait": 30,
+  "leave_room_timeout": 300 
+}
