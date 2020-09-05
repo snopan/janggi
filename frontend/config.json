@@ -1,5 +1,5 @@
 {
-  "domain": "https://snopan.com/janggi",
+  "domain": "https://janggi.snopan.com",
   "session_expire": 1,
   "ws": {
     "address": "snopan.com",
