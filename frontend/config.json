@@ -1,8 +1,8 @@
 {
-  "domain": "https://snopan.github.io/janggi",
+  "domain": "http://snopan.com/janggi",
   "session_expire": 1,
   "ws": {
-    "address": "128.199.175.242",
+    "address": "snopan.com",
     "port": 9080
   },
   "faces": [

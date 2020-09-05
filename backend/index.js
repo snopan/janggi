@@ -3,15 +3,9 @@ import Crypto from "crypto";
 import Session from "./Session.js";
 import Room from "./Room.js";
 import config from "./config.json";
-import fs from "fs";
-import https from "https";
 
-const server = https.createServer({
-  cert: fs.readFileSync('./cert.pem'),
-  key: fs.readFileSync('./key.pem')
-});
-
-const wss = new WebSocket.Server({server});
+const wss = new WebSocket.Server({port: 9080});
+console.log("Started server");
 
 wss.on("connection", (ws, req) => {
     console.log("connection established")
@@ -58,8 +52,6 @@ wss.on("connection", (ws, req) => {
     })
 })
 
-server.listen(9080);
-console.log("Started server");
 
 const parseMessage = (ws, msg) => {
 
