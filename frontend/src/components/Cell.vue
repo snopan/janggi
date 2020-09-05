@@ -67,7 +67,7 @@
             // an animation is needed
             position() {
                 window.TweenLite.to(this.$data, 0.5, { tween_x: this.get_new_x() });
-                window.TweenLite.to(this.$data, 0.5, {    tween_y: this.get_new_y() });
+                window.TweenLite.to(this.$data, 0.5, { tween_y: this.get_new_y() });
             },
 
             // When it's a resize, position change

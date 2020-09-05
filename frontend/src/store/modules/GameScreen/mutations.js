@@ -48,8 +48,8 @@ const setGameScreen = (state, { pieces, color, spectator_color }) => {
 const resetGameScreen = (state) => {
     state.player_color = false;
     state.spectator_color = false;
-    state.checked_color = false,
-    state.checked_moves = false,
+    state.checked_color = false;
+    state.checked_moves = false;
     state.winner = false;
     state.pieces = {};
     state.selecting_piece = false;
@@ -146,6 +146,13 @@ const executeMove = (state, { color, from, to }) => {
         from,
         to
     )
+
+    // Update the object address so vue will update
+    let temp = {};
+    for (let pos in state.pieces) {
+        temp[pos] = state.pieces[pos];
+    }
+    state.pieces = temp;
 
     // When a piece is moved, then it should be off check
     state.checked_color = false;
