@@ -2,7 +2,7 @@
   "domain": "https://janggi.snopan.com",
   "session_expire": 1,
   "ws": {
-    "address": "snopan.com",
+    "address": "snopan.com/janggi",
     "port": 9080
   },
   "faces": [
