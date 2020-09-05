@@ -1,6 +1,7 @@
 call npm run build
 
 call cd dist
+call echo janggi.snopan.com > CNAME
 call git init
 call git add -A
 call git commit -m "deploy"
